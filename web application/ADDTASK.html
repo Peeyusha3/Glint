@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Firebase</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="addtask.css">
+</head>
+<body>
+
+<h1 align="center" style="font-family: 'Ubuntu', sans-serif;">Update Tasks or Add New Tasks</h1>
+<button type="button"  class="btn btn-primary" id="logout" onclick=""><h3> <a style="color:white; font-size: 15px;" href="main.html">Log Out</a></h3></button>
+<br><br><br>
+    <div class="row height="300" width="300" class="center">
+
+        <div class="container">
+        
+
+            <div class="alert alert-success logout-message" style="display:none;">Logged Out successfully.</div>
+            <div class="alert alert-success success-message" style="display:none;">Form submitted successfully.</div>
+            <form id="contactForm" method="post" action="taskpage.html" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="examplebar">Task Number</label>
+                    <input type="text" class="form-control bar" id="examplebar" placeholder="Enter the task number" required>
+                </div>
+             
+                <div class="form-group">
+                    <label for="exampleadvance">Enter task details</label>
+                    <input type="text" class="form-control advance" id="exampleadvance" placeholder="Enter task details" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampledate">Time of Task</label>
+                    <input type="time" class="form-control date" id="exampledate" placeholder="Enter time of task" cols="30" rows="10" required>
+                </div>
+                <button style = "margin-left: 680px;" id="butt" type="submit" class="btn btn-primary" onclick="othername();">Submit</button>
+                <button style="margin-left: 4px; margin-top: -70px;" type="button" class="btn btn-primary" <h3> <a style="color:white;" href="tasklist.html">Tasks log</a></h3></button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="main1.js"></script>
+</body>
+</html>
