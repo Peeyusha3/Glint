@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title>Customer Database</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="tasklist.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  </head>
+
+  <body>
+<center>
+
+</center>
+<h1 align="center" style="margin-left: -300px; font-family: 'Ubuntu', sans-serif;">Task Details</h1>
+<input type="text" id="tasknum" placeholder="enter task ID to delete" style="margin-left: 60px; font-size: 15px; text-align: center;"></br>
+<button type="button"  class="btn btn-primary" id="delete task" onclick="del();" style="color: white; font-size: 10px; margin-left: 90px; margin-top: 10px; padding-bottom: 1px; padding-top: 0px;"><h3>Delete task</h3></button>
+<button type="button"  class="btn btn-primary" id="logout" onclick=""><h3> <a style="color:white; font-size: 15px; padding-top: -100px;padding-bottom: 100px; margin-top: -50px; margin-bottom: 50px;" href="main.html">Log Out</a></h3></button>
+<button type="button"  class="btn btn-primary" id="taskbutton" onclick=""><h3> <a style="color:white; font-size: 15px; padding-top: -40px;margin-top: 1px;" href="ADDTASK.html">Add Task</a></h3></button>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Enter the task id" title="Enter barcode">
+    <div class="container">
+      <h1 id="bigTextEvaluationStudents"></h1>
+      
+      <table class="table" id="table1" style="background:rgba(1,0,0,0.4); color: white;">
+    		<thead>
+    			<tr>
+    				<th>TIME of TASK</th>
+    				<th>Task ID</th>
+    				<th>DESCRIPTION</th>
+    				
+    			</tr>
+
+    		</thead>
+    		<tbody>
+    		</body>
+    	</table>
+    </div>
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("table1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+    <script src="firebase1.js"></script>
+    <script type="text/javascript" src="maindel.js"></script>
+  </body>
+</html>

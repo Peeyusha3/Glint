@@ -1,0 +1,42 @@
+.login{
+	float: left;
+	border: 2px solid white;
+	margin-top: 50px;
+	margin-left: 145px;
+	
+	font-family: 'Ubuntu', sans-serif;
+	line-height: 2.0;
+	padding: 5px;
+}
+body{
+	background-image: url("bg5.png");
+	background-repeat: no-repeat;
+	size: 500px 500px;
+}
+.log{
+	padding-top:40px;
+	padding-left: 10px;
+
+}
+label{
+	color: white;
+}
+
+
+}
+button {
+	float: right;
+}
+h1{
+	font-family: 'Montserrat Subrayada', sans-serif;
+	font-size: 50px;
+	color: white;
+	padding-left: 220px;
+	padding-top: 50px;
+}
+#login {
+	transition-duration: 0.5s;
+}
+#login:hover{
+	background-color: rgba(0,0,0,0.1);
+}
