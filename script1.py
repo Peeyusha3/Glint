@@ -7,12 +7,12 @@ import keyboard
 import time
 
 config = {
-    'apiKey': "AIzaSyCieXcQQEWCX3X62i6N3qpY_1jthV34ywM",
-  'authDomain': "projectforalze.firebaseapp.com",
-  'databaseURL': "https://projectforalze.firebaseio.com",
+    'apiKey': "XXXXXXXXXXXXXXXXXXXXXXX",
+  'authDomain': "XXXXXXXXXXXX.firebaseapp.com",
+  'databaseURL': "https://XXXXXXXXX.firebaseio.com",
   'projectId': "projectforalze",
-  'storageBucket': "projectforalze.appspot.com",
-  'messagingSenderId': "785579953",
+  'storageBucket': "XXXXXXXXXX.appspot.com",
+  'messagingSenderId': "XXXXXXXXXX",
 }
 
 #firebase = pyrebase.initialize_app(config)
