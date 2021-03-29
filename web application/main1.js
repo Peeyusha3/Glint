@@ -1,10 +1,10 @@
 var config = {
-         apiKey: "AIzaSyCieXcQQEWCX3X62i6N3qpY_1jthV34ywM",
+         apiKey: "",
     authDomain: "projectforalze.firebaseapp.com",
     databaseURL: "https://projectforalze.firebaseio.com",
     projectId: "projectforalze",
     storageBucket: "projectforalze.appspot.com",
-    messagingSenderId: "785579953",
+    messagingSenderId: "",
     
 };
 var input;
